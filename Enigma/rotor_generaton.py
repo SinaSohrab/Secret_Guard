@@ -15,6 +15,6 @@ r3=list(alphabet)
 random.shuffle(r3)
 r3="".join(r3)
 
-f=open("Enigma/rooto_generaton.enigma","wb")
+f=open("Enigma/password/roto_generaton.enigma","wb")
 pickle.dump((r1,r2,r3),f)
 f.close()
