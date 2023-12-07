@@ -1,20 +1,18 @@
 number = int(input("input your number: "))
-taghsim = number
-baghimande = number
-javab_list=[]
 
-while True:
-    javab_taghsim = taghsim // 2
-    javab_baghimande = baghimande % 2
 
-    taghsim = javab_taghsim
-    baghimande = javab_taghsim
-    javab_list.append(javab_baghimande)
+def number_to_binery(decimal):
+    binary = ""
 
-    if taghsim == 0:
-        break
+    if decimal == 0:
+        binary = "0"
+    while decimal > 0:
+        binary = str(decimal % 2) + binary
+        decimal = decimal // 2
 
-javab = list(map(str, javab_list))
-javab = "".join(javab)
+    return binary
 
-print(javab)
+
+binary_output = number_to_binery(number)
+
+print("binary: ", binary_output)
